@@ -1,6 +1,7 @@
 import { DataSource } from "typeorm";
 import dotenv from "dotenv";
 import { Plant } from "./entities/Plant";
+import { User } from "./entities/User";
 
 dotenv.config({path: ".env.local"});
 
@@ -15,10 +16,9 @@ const appDataSource = new DataSource({
     database: process.env.DB_NAME,
 
     // Connection params
-    synchronize: false,
-    logging: false,
+    synchronize: true,
 
     // TYPEORM Enitities 
-    entities: [Plant],
+    entities: [Plant, User],
 });
 export default appDataSource;
