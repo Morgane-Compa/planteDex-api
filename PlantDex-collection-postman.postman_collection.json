@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "921ab294-707b-4d51-bbb7-77cb1ef9cdb4",
+		"name": "PlantDex-collection-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28027946"
+	},
+	"item": [
+		{
+			"name": "Plantdex-CRUD",
+			"item": [
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/plants/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"plants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/plants/801434",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"plants",
+								"801434"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPlant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"nom\": \"bloop\",\r\n      \"soleil\": \"moyen\",\r\n      \"arrosage\": 2,\r\n      \"categorie\": \"plantes fleuries\",\r\n      \"image\": \"https://images.truffaut.com/media/catalog/product/cdn:///Articles/jpg/0801000/801428_001.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/plants/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"plants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePlant",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n      \"nom\": \"rosier\",\r\n      \"soleil\": \"faible\",\r\n      \"arrosage\": 2,\r\n      \"categorie\": \"plantes fleuries\",\r\n      \"image\": \"https://images.truffaut.com/media/catalog/product/cdn:///Articles/jpg/0801000/801428_001.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/plants/910742",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"plants",
+								"910742"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/plants/910742",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"plants",
+								"910742"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "plantDex-Authentification",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bloop@bloop.com\",\r\n    \"password\": \"Bloupidou\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
